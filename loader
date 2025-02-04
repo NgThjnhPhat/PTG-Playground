@@ -1,1 +1,27 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/NgThjnhPhat/PTG-Playground/refs/heads/main/saguinehub"))()
+--> Wait for the game to load
+repeat task.wait() until game:IsLoaded()
+
+--> Services
+local Players = game:GetService("Players")
+local VirtualUser = game:GetService("VirtualUser")
+
+--> References
+local Player = Players.LocalPlayer
+local PlaceId = game.PlaceId
+
+--> Functions
+Player.Idled:Connect(function()
+	VirtualUser:CaptureController()
+	VirtualUser:ClickButton2(Vector2.new())
+end)
+
+function checkForGame()
+	if PlaceId == 86639052909924 then
+		print("Correct game, Loading Hub..")
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/NgThjnhPhat/PTG-Playground/main/saguinehub"))()
+	else
+		Player:Kick("Wrong game, please try again!")
+	end
+end
+
+checkForGame()
