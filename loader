@@ -18,7 +18,9 @@ end)
 function checkForGame()
 	if PlaceId == 86639052909924 then
 		print("Correct game, Loading Hub..")
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/NgThjnhPhat/PTG-Playground/main/saguinehub"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/NgThjnhPhat/PTG-Playground/main/status"))()
+		task.wait(1)
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/NgThjnhPhat/PTG-Playground/main/saguinehubrewrite"))()
 	else
 		Player:Kick("Wrong game, please try again!")
 	end
