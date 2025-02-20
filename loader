@@ -25,7 +25,7 @@ function checkForGame()
 		print("Correct game, Loading Hub..")
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/NgThjnhPhat/PTG-Playground/main/status"))()
 		task.wait(1)
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/NgThjnhPhat/PTG-Playground/main/autodungeonrewrite"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/NgThjnhPhat/PTG-Playground/main/temporarydungeon"))()
 	else
 		Player:Kick("Wrong game, please try again!")
 	end
